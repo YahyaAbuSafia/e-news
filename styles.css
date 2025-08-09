@@ -1,0 +1,33 @@
+/* Simple responsive styles for the news site */
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{margin:0;color:#222;line-height:1.4}
+header{display:flex;align-items:center;gap:20px;padding:12px 18px;background:#0b3b66;color:white;flex-wrap:wrap}
+.logo{font-weight:700;font-size:1.25rem}
+nav a{color:white;margin-right:12px;text-decoration:none}
+.search{margin-left:auto;display:flex;gap:6px}
+.search input{padding:6px}
+.auth a{color:white;margin-left:8px;text-decoration:none}
+main{display:block;padding:18px}
+.breaking-list{display:flex;gap:12px;overflow:auto}
+.breaking-list article{min-width:220px;background:#f7f7f7;padding:8px;border-radius:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card, .single{background:white;padding:12px;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+.card img, .breaking-list img, .single img{width:100%;height:140px;object-fit:cover;border-radius:6px}
+.excerpt{color:#444}
+.meta{font-size:0.85rem;color:#666}
+.pagination{margin-top:12px}
+.pagination a{padding:6px 8px;border:1px solid #ddd;margin-right:6px;text-decoration:none;color:#333;border-radius:4px}
+.pagination a.active{background:#0b3b66;color:white;border-color:#0b3b66}
+aside{padding:18px;background:#f2f2f2}
+footer{text-align:center;padding:12px;background:#111;color:white;margin-top:18px}
+@media(min-width:900px){
+  body{display:grid;grid-template-columns:1fr 300px;grid-template-rows:auto 1fr auto;grid-template-areas:"main aside" "main aside" "footer footer"}
+  main{grid-area:main}
+  aside{grid-area:aside}
+  footer{grid-column:1 / -1}
+}
+label{display:block;margin:8px 0}
+input, textarea, select{width:100%;padding:8px;border:1px solid #ccc;border-radius:4px}
+button{background:#0b3b66;color:white;padding:8px 12px;border:none;border-radius:6px;cursor:pointer}
+button:hover{opacity:0.9}
+.error{color:#a00}
