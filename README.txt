@@ -1,24 +1,62 @@
-News Website (e-news) - Basic setup instructions
+# E-News Web Application
 
-Files included:
-- db.php (DB connection)
-- index.php, article.php, categories.php, category.php
-- search.php
-- login.php, register.php
-- admin.php (simple admin CRUD)
-- styles.css
-- news_db.sql (database schema + sample data)
+E-News is a dynamic web application developed using PHP that allows users to browse news articles, search content, and explore different categories. The system also includes user authentication and an admin panel for managing content.
 
-Steps to run locally:
-1. Install PHP and MySQL (e.g., XAMPP, MAMP, LAMPP).
-2. Place the e-news folder in your web server root (e.g., htdocs).
-3. Import 'news_db.sql' into MySQL (via phpMyAdmin or mysql CLI).
-4. Edit 'db.php' with your DB credentials if not using defaults (root with no password).
-5. In the database users table, the admin user password is a placeholder. To create a usable admin:
-   - Register a new account via register.php, then update role in DB:
-     UPDATE users SET role='admin' WHERE email='your-email';
-6. Open browser: http://localhost/e-news/index.php
+## Features
 
-Notes:
-- This is a minimal, educational project to satisfy the assignment requirements.
-- Improve security (CSRF, input validation, file uploads) before production use.
+- Browse and read news articles
+- Search functionality for finding specific content
+- Category-based article filtering
+- User registration and login system
+- Admin panel for managing articles and users
+- Database integration for storing and retrieving data
+
+## Technologies Used
+
+- PHP
+- MySQL
+- HTML
+- CSS
+- Git & GitHub
+
+## Project Structure
+
+- index.php – Homepage displaying news articles
+- article.php – Displays individual article details
+- categories.php / category.php – Handles category browsing
+- search.php – Search functionality
+- login.php / register.php – User authentication
+- admin.php – Admin dashboard for content management
+- db.php – Database connection setup
+- news_db.sql – Database schema and sample data
+
+## Installation
+
+1. Clone the repository:
+   git clone https://github.com/YahyaAbuSafia/e-news.git
+
+2. Move the project to your local server (e.g., XAMPP or WAMP)
+
+3. Import the database:
+   - Open phpMyAdmin
+   - Create a database (e.g., news_db)
+   - Import the news_db.sql file
+
+4. Configure database connection in db.php
+
+5. Start your local server and open:
+   http://localhost/e-news
+
+## Future Improvements
+
+- Improve UI/UX design
+- Add image upload for articles
+- Enhance security (input validation and authentication)
+- Implement REST API
+- Add pagination and performance optimization
+
+## Author
+
+Yahya Abu Safia  
+LinkedIn: https://www.linkedin.com/in/yahyaabusafia  
+GitHub: https://github.com/YahyaAbuSafia
